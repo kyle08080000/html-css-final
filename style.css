@@ -328,7 +328,7 @@ table {
 	border-radius: 3px;
 	border: none;
 }
-.form h1{
+.form h3{
 	padding-top: 38px;
 	padding-bottom: 34px;
 	font-size: 21px;
@@ -339,7 +339,7 @@ table {
 .formRight{
 	margin-left: 40px;
 }
-.formRight h2{
+.formRight h4{
 	margin-bottom: 5px;
 }
 .n, .p, .m{
