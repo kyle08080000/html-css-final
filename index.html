@@ -14,16 +14,22 @@
 <meta property="og:image" content="FB的圖片" />
 <title>HTML、CSS 最終作業</title>
 <link rel="icon" href="./img/HSicon.png" />
-<link rel="stylesheet" href="style.css">
-<script type="text/javascript" src="檔名"></script>
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="css/lightbox.min.css">
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <div class="wrap">
+        <!-- fb tw 粉絲團-->
         <div class="follow">
             <a class="fb" href="#">粉絲團</a>
             <span>|</span>
             <a class="tw" href="#">追隨我們</a>
         </div>
+        <!-- header -->
         <div class="header">
             <h1>
                 <a href="#">hex school</a>
@@ -35,94 +41,215 @@
                 <li>
                     <a href="＃">關於六角</a>
                 </li>
+                <!-- 箭頭icon -->
+                <div class="fas fa-angle-right"></div>
                 <li>
-                    <a href="＃">問與答</a>
+                    <a href="＃" class="ask">問與答</a>
                 </li>
             </ul>
         </div>
-        <a class="banner" href="#">banner</a>
+        <!-- 輪播圖 & 下拉選單 區塊 -->
+        <div class="swip">
+            <!-- 下拉選單 -->
+            <div class="down-menu">
+                <ul>
+                    <li><a href="">常見問答</a></li>
+                    <li><a href="">六角學員作品牆</a></li>
+                    <li><a href="">如何成為前端工程師</a></li>
+                </ul>            
+            </div>
+            <!-- 輪播圖 -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="/img/banner.png" alt="六角學院">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="/img/bg_course.png" alt="筆電">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="/img/bg_index.png" alt="Code">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="/img/bg_QA.png" alt="question mark">
+                        </a>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <!-- 內容區塊 -->
         <div class="content">
-            <div class="couese">
+            <!-- html5 響應式網站 jQuery實戰教學 區塊 -->
+            <div class="couese animate__animated animate__fadeInRight">
                 <div class="course-item">
                     <div class="bottom-line"></div>
                     <div class="right-line"></div>
-                    <a class="course-item-a" href="#">
-                        <div class="html-img"></div>
+                    <div class="course-item-a" href="#" >
+                        <!-- lightBox -->
+                        <a class="html-img" data-lightbox="image-1" href="/img/html.png"></a>
+                        
                         <h2>Html 5 基礎教學</h2>
-                        <p>主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過贾際的範例，瞭解正確的網站閱發流程，講師均具有業界開發經驗，譔學員學習業界主流的開發方法。</p>
-                    </a>
+                        <p class="coueseP">主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過贾際的範例，瞭解正確的網站閱發流程，講師均具有業界開發經驗，譔學員學習業界主流的開發方法。</p>
+                    </div>
                 </div>
                 <div class="course-item">
                     <div class="bottom-line"></div>
                     <div class="right-line"></div>
-                    <a class="course-item-a" href="#">
-                        <div class="rwd-img"></div>
+                    <div class="course-item-a">
+                        <!-- lightBox -->
+                        <a class="rwd-img" data-lightbox="image-2" href="/img/rwd.png"></a>
+
                         <h2>響應式網站設計</h2>
-                        <p>響應式網站設計 (Responsive webdesian)，目前大多使用者均是以手機瀏覽情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生瞭解行動版開發技巧。</p>
-                    </a>
+                        <p class="coueseP">響應式網站設計 (Responsive webdesian)，目前大多使用者均是以手機瀏覽情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生瞭解行動版開發技巧。</p>
+                    </div>
                 </div>
                 <div class="course-item">
                     <div class="bottom-line"></div>
                     <div class="right-line"></div>
-                    <a class="course-item-a" href="#">
-                        <div class="jquery-img"></div>
+                    <div class="course-item-a">
+                        <!-- lightBox -->
+                        <a class="jquery-img" data-lightbox="image-3" href="/img/jQuery.png"></a>
+                        
                         <h2>jQuery 實戰教學</h2>
-                        <p>本課程有以下特色
+                        <p class="coueseP">本課程有以下特色
                             <br>．暸解變數的使用方法
                             <br>．學習並操作DOM
                             <br>．學習基本數學運算方法
                             <br>．套件的操作及運用
                         </p>
-                    </a>
+                    </div>
                 </div>
             </div>
-            <h3 class="table-title">線上及實體課的差異</h3>
-            <table class="compare">
-                <tr>
-                    <th>項目</th>
-                    <th>Hex School 線上課程</th>
-                    <th>一般線上課程</th>
-                    <th>實體課程</th>
-                </tr>
-                <tr>
-                    <td>費用</td>
-                    <td class="green">較低</td>
-                    <td class="green">較低</td>
-                    <td>較高</td>
-                </tr>
-                <tr>
-                    <td>學習效果</td>
-                    <td>一般</td>
-                    <td class="green">較低</td>
-                    <td class="green">很好</td>
-                </tr>
-                <tr>
-                    <td>Code review</td>
-                    <td class="green">有</td>
-                    <td>無</td>
-                    <td>不一定</td>
-                </tr>
-                <tr>
-                    <td>課程更新速度</td>
-                    <td class="green">普通</td>
-                    <td class="green">普通</td>
-                    <td>較慢</td>
-                </tr>
-                <tr>
-                    <td>多次複習</td>
-                    <td class="green">可</td>
-                    <td>可</td>
-                    <td>不可</td>
-                </tr>
-                <tr>
-                    <td>字幕</td>
-                    <td class="green">有</td>
-                    <td>不一定</td>
-                    <td>板書</td>
-                </tr>
-            </table>
-            <div class="form">
-                <h3>對我們的課程有興趣嗎？<br>歡迎留下資料</h3>
+            <!-- 邁向前端工程師/設計師之路 -->
+            <h3 id="jobH3" class="job">邁向前端工程師/設計師之路</h3>
+            <!-- UI設計師 網頁設計師 前端工程師 區塊 -->
+            <div class="jobBlock" id="jobBlockId">
+                <!-- UI設計師 -->
+                <a class="jobItem" id="uiDesign" href="#">
+                    <h3 class="jobTitle">UI 設計師</h3>
+                    <div class="fas fa-plus"></div>
+                    <div class="jobBox">
+                        <div class="jobHeading">
+                            <i class="fas fa-palette"></i>
+                            <p>設計理念</p>
+                        </div>
+                        <div class="jobOverlay">
+                            <p>讓使用者在使用產品的時候感到快樂。</p>
+                            <span class="celebrity"> - Don Norman</span>
+                            <p class="Suitable">適合對於設計圖形、色彩變化感興趣者投入。</p>
+                        </div>
+                        <div id="jobMenu" class="jobBox_image">
+                        <div class="jobBox_rotate">
+                            <img src="img/job1.png" alt="UI設計師" />
+                        </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- 網頁設計師 -->
+                <a class="jobItem" id="webDesign" href="#">
+                    <h3 class="jobTitle">網頁設計師</h3>
+                    <div class="fas fa-plus"></div>
+                    <div class="jobBox">
+                        <div class="jobHeading">
+                            <i class="fas fa-pager"></i>
+                            <p>設計理念</p>
+                        </div>
+                        <p class="jobOverlay">設計不僅要看得見，更要用得順。<span class="celebrity"> - Steve Jobs</span><span class="Suitable">適合有設計背景，或經過美感訓練者投入。</span></p>
+                        <div id="jobMenu" class="jobBox_image">
+                        <div class="jobBox_rotate">
+                            <img src="img/job2.png" alt="網頁設計師" />
+                        </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- 前端工程師 -->
+                <a class="jobItem" id="frontEndEngineer" href="#">
+                    <h3 class="jobTitle">前端工程師</h3>
+                    <div class="fas fa-plus"></div>
+                    <div class="jobBox">
+                        <div class="jobHeading">
+                            <i class="fas fa-wrench"></i>
+                            <p>設計理念</p>
+                        </div>
+                        <p class="jobOverlay">最好的效能優化就是不做不必要的事情。<span class="celebrity"> - Scott Meyers
+                        </span><span class="Suitable">所有人皆可投入，學習時間長，但發展更好的職位。</span></p>
+                        <div id="jobMenu" class="jobBox_image">
+                        <div class="jobBox_rotate">
+                            <img src="img/job3.png" alt="前端工程師" />
+                        </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 線上及實體課的差異 -->
+            <div id="tableId" class="differences">
+                <h3 class="table-title">線上及實體課的差異</h3>
+                <table class="compare">
+                    <tr>
+                        <th>項目</th>
+                        <th>Hex School 線上課程</th>
+                        <th>一般線上課程</th>
+                        <th>實體課程</th>
+                    </tr>
+                    <tr>
+                        <td>費用</td>
+                        <td class="green">較低</td>
+                        <td class="green">較低</td>
+                        <td>較高</td>
+                    </tr>
+                    <tr>
+                        <td>學習效果</td>
+                        <td>一般</td>
+                        <td class="green">較低</td>
+                        <td class="green">很好</td>
+                    </tr>
+                    <tr>
+                        <td>Code review</td>
+                        <td class="green">有</td>
+                        <td>無</td>
+                        <td>不一定</td>
+                    </tr>
+                    <tr>
+                        <td>課程更新速度</td>
+                        <td class="green">普通</td>
+                        <td class="green">普通</td>
+                        <td>較慢</td>
+                    </tr>
+                    <tr>
+                        <td>多次複習</td>
+                        <td class="green">可</td>
+                        <td>可</td>
+                        <td>不可</td>
+                    </tr>
+                    <tr>
+                        <td>字幕</td>
+                        <td class="green">有</td>
+                        <td>不一定</td>
+                        <td>板書</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 對我們的課程有興趣嗎？ -->
+            <div id="interested"  class="form">
+                <h4>對我們的課程有興趣嗎？<br>歡迎留下資料</h4>
                 <div class="enter">
                 <div class="enterLeft">
                     <div class="quiz">
@@ -150,6 +277,7 @@
                 </div>
             </div>
         </div>
+        <!-- 頁尾 -->
         <div class="footer">
             <a class="footerLogo" href="#">footerLogo</a>
             <ul>
@@ -162,7 +290,16 @@
                     <a href="tel:0999123456">0999123456</a>
                 </li>
             </ul>
+            <!-- 回頂部 -->
+            <div class="fas fa-angle-double-up"></div>
         </div>
     </div>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/all.js"></script>
+    <script type="/text/javascript" src="檔名"></script>
+
 </body> 
 </html>

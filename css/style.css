@@ -54,18 +54,21 @@ table {
 .wrap{
 	margin: 0 auto;
 	width: 1024px;
+	overflow: hidden;
 }
 
 .follow{
 	display: flex;
 	justify-content: end;
 	background: #f6f6f6;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 .fb{
 	display: block;
 	display: flex;
 	align-items: center;
-	background: url(img/fb.png);
+	background: url(/img/fb.png);
 	background-position: 0px 50%;
 	background-repeat: no-repeat;
 	width: 60px;
@@ -93,7 +96,7 @@ table {
 	display: block;
 	display: flex;
 	align-items: center;
-	background: url(img/tw.png);
+	background: url(/img/tw.png);
 	background-position: 0px 50%;
 	background-repeat: no-repeat;
 	width: 90px;
@@ -108,6 +111,7 @@ table {
 	color: rgb(0, 204, 255);
 }
 
+
 .header{
 	margin-top: 3px;
 	margin-left: 20px;
@@ -115,10 +119,11 @@ table {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: relative;
+	z-index: 10;
+	/* float: left; */
 }
 .header h1 a{
-	background-image: url(img/logo.png);
+	background-image: url(/img/logo.png);
 	width: 171px;
 	height: 37px;
 	display: block;
@@ -126,10 +131,11 @@ table {
 	overflow: hidden;
 	white-space: nowrap;
 }
-
 .menu{
 	display: flex;
 	margin-right: 10px;
+	position: relative;
+	/* overflow: hidden; */
 }
 .menu li{
 	width: 80px;
@@ -138,6 +144,10 @@ table {
 	position: relative;
 	display: inline-block;
 	padding: 0 10px;
+}
+/* 問與答 箭頭 */
+.ask{
+	padding-left: 20px;
 }
 .menu a{
 	display: flex;
@@ -150,8 +160,9 @@ table {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	color: #00ab8c;
-
+	text-indent: 6px;
 }
+/* 讀條效果 */
 .menu a::after {
 	content: "";
 	position: absolute;
@@ -165,19 +176,81 @@ table {
 .menu a:hover::after {
 	width: 100%;
 }
-
-.banner{
-	display: block;
-	margin: 0 auto;
-	background: url(img/banner.png);
-	width: 1001px;
-	height: 346px;
-	margin-bottom: 58px;
-	text-indent: 101%;
-	white-space: nowrap;
+/* 輪播圖 & 下拉選單 區塊 */
+.swip{
+	position: relative;
 	overflow: hidden;
 }
+/* 下拉選單 */
+.down-menu{
+	width: 180px;
+	height: 200px;
+	background: #00ab8c;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: 0.7s ease;/* 關閉速度 */
+	transform: translateY(-350px);
+	float: left;
+	z-index: 2;
+}
+.open {
+	transform: translateX(0px);/* 開啟速度 */
+	transition: 0.5s ease;
+	
+}
+.down-menu li a{
+	display: block;
+	text-align: end;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	margin-top: 15px;
+	padding-top: 15px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	transition: 0.3s ease;
+}
+.down-menu li:hover{
+	background: #255957;
+}
+.down-menu a:hover{
+	color: #fff;
 
+}
+/* 選轉箭頭 */
+.fa-angle-right {
+	display: block;
+	position: absolute;
+	top: 33%;
+	right: 25%;
+	color: #00ab8c;
+    transition: transform 0.5s;
+}
+.fa-angle-right-t{
+    transform: rotate(90deg);
+}
+
+/* 輪播圖 */
+.swiper {
+	width: 1025px;
+	height: 560px;
+	/* margin-top: 25px; */
+	margin-bottom: 25px;
+}
+.swiper-slide a img{
+	height: 100% !important;
+}
+.swiper-button-prev,
+.swiper-button-next{
+	color: white;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+	color: #00cc98;
+}
+
+/* html5 響應式網站 jQuery實戰教學 區塊 */
 .couese{
 	display: flex;
 	justify-content: space-evenly;
@@ -185,12 +258,16 @@ table {
 .course-item {
     display: flex;
     justify-content: space-evenly;
-    position: relative;
-    width: 300px;	
+    position: relative;/* 效果線相對定位點 */
+    width: 300px;
+	height: 400px;
     box-shadow: 0 2px 3px 2px #f1f1f1;
     overflow: hidden;
 }
-/* Top line */
+.course-item a{
+	display: block;
+}
+/* 線條效果 Top line */
 .course-item:before, .course-item:after {
     content: "";
     position: absolute;
@@ -204,7 +281,7 @@ table {
 .course-item:hover:before {
     width: 100%;
 }
-/* Left line */
+/* 線條效果 Left line */
 .course-item:after {
     content: "";
     position: absolute;
@@ -218,7 +295,7 @@ table {
 .course-item:hover:after {
     height: 100%;
 }
-/* Bottom line */
+/* 線條效果 Bottom line */
 .course-item .bottom-line {
     content: "";
     position: absolute;
@@ -232,7 +309,7 @@ table {
 .course-item:hover .bottom-line {
     width: 100%;
 }
-/* Right line */
+/* 線條效果 Right line */
 .course-item .right-line {
     content: "";
     position: absolute;
@@ -249,33 +326,159 @@ table {
 .course-item:hover{
 	box-shadow: 0 0 10px 5px #e5e5e5;
 }
-
 .course-item-a{
+	display: block;
 	text-decoration: none;
 	color: black;
+}
+.course-item-a a{
+	display: block;
 }
 .html-img, .rwd-img, .jquery-img{
 	width: 300px;
 	height: 170px;
 }
 .html-img{
-	background: url(img/html.png);
+	background: url(/img/html.png);
 }
 .rwd-img{
-	background: url(img/rwd.png);
+	background: url(/img/rwd.png);
 }
 .jquery-img{
-	background: url(img/jQuery.png);
+	background: url(/img/jQuery.png);
 }
 .course-item h2{
 	text-align: center;
 	font-size: 25px;
 }
-.course-item p{
+.coueseP{
 	padding: 20px;
 	line-height: 1.5;
 }
 
+/* UI設計師 網頁設計師 前端工程師 */
+.job{
+	margin-top: 50px;
+	font-size: 50px;
+	text-align: center;
+}
+.jobs{
+	display: flex;
+	font-size: 30px;
+	margin-top: 30px;
+	
+}
+
+.jobBlock{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.jobItem{
+	text-decoration: none;
+	color: black;
+	position: relative;
+}
+.jobTitle{
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.jobBox {
+	width:300px;
+	height: 300px;
+	background-color: #255957;
+	overflow:hidden;
+	border-radius:5px;
+}
+
+.jobBox_image {/* 平行四邊形遮蓋範圍 */
+	width:430px;/* 圖片露出寬度 */
+	height: 300px;
+	margin-left:-80px;
+	background-color:green;
+	transform:skewX(150deg);/* 平行四邊形平移成正方形 */
+	overflow:hidden;
+	transition: all 800ms cubic-bezier(0.680, -0.550, 0.265, 1.550);/* 貝茲曲線 */
+}
+.jobBox:hover > .jobBox_image {
+	width:100px; /* 展開 or 收起 */
+}
+
+.jobBox_rotate {
+	background-color:blue;
+	width:300px;
+	height:80px;
+	margin-left:20px;
+	transform:skewX(-150deg);
+}
+.jobBox_rotate img {
+	margin-left:-10px;
+	width:105%;
+}
+/* .jobHeading,.jobOverlay {
+	position:absolute;
+	margin:15px;
+	font-size:20px;
+	text-decoration:none;
+} */
+.jobHeading{
+	position:absolute;
+	margin-top:60px;
+	margin-left:100px;
+	color: #00cc98;
+	font-weight: bold;
+	letter-spacing: 0.3em;
+	display: flex;
+}
+.fa-palette, .fa-pager, .fa-wrench{
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+.jobOverlay {
+	position:absolute;
+	color:white;
+	width: 180px;
+	margin-top:90px;
+	margin-left:100px;
+	line-height: 1.5em;
+	letter-spacing: 0.1em;
+}
+.celebrity{
+	position: absolute;
+	right: 0px;
+	top: 80px;
+	font-size: 16px;
+}
+.Suitable{
+	border: 2px dashed #00ab8c;
+	position: absolute;
+	width: 250px;
+	left: -90px;
+	top: 140px;
+	font-size: 16px;
+	padding: 3px;
+	padding-left: 10px;
+}
+.fa-plus{
+	color: #fff;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	transition: transform 1s;
+}
+.jobItem:hover .fa-plus {
+	transition: transform 1s;
+	transform: rotate(-135deg);
+	
+}
+
+
+/* 線上及實體課程差異 */
 .table-title{
 	text-align: center;
 	font-size: 24px;
@@ -308,6 +511,7 @@ table {
 	color: #2e9573
 }
 
+/* 對我們的課程有興趣嗎？ */
 .form{
 	background: -webkit-linear-gradient(top, #00674b, #02986e);
 	width: 1000px;
@@ -360,7 +564,7 @@ input:focus {
 	outline: none;
 	box-shadow: 0 0 1px 2px #00cc98;
 }
-.sb{
+.sb{/* 送出按鈕 */
 	width: 70px;
 	height: 32px;
 	margin-top: 5px;
@@ -375,6 +579,7 @@ input:focus {
 	color: #00cc98;
 }
 
+/* 頁尾 */
 .footer{
 	display: flex;
 	justify-content: space-between;
@@ -382,7 +587,7 @@ input:focus {
 	padding-bottom: 58px;
 }
 .footerLogo{
-	background: url(img/footer.png);
+	background: url(/img/footer.png);
 	width: 171px;
 	height: 36px;
 	margin-left: 20px;
@@ -406,3 +611,17 @@ input:focus {
 	color: #ff0000;
 	text-decoration: underline;
 }
+/* 回頂部 */
+.fa-angle-double-up{
+	color: #00ab8c;
+	font-size: 60px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+.animate__animated {
+	--animate-duration: 2s;
+}
+/* #uiDesign, #webDesign, {
+	opacity: 0;
+} */
