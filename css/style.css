@@ -68,7 +68,7 @@ table {
 	display: block;
 	display: flex;
 	align-items: center;
-	background: url(/img/fb.png);
+	background: url(/img/follow/fb.png);
 	background-position: 0px 50%;
 	background-repeat: no-repeat;
 	width: 60px;
@@ -96,7 +96,7 @@ table {
 	display: block;
 	display: flex;
 	align-items: center;
-	background: url(/img/tw.png);
+	background: url(/img/follow/tw.png);
 	background-position: 0px 50%;
 	background-repeat: no-repeat;
 	width: 90px;
@@ -264,9 +264,7 @@ table {
     box-shadow: 0 2px 3px 2px #f1f1f1;
     overflow: hidden;
 }
-.course-item a{
-	display: block;
-}
+
 /* 線條效果 Top line */
 .course-item:before, .course-item:after {
     content: "";
