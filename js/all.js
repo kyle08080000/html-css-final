@@ -11,7 +11,7 @@ $(document).ready(function () {
     direction: 'horizontal',
     loop: true,
     speed: 2000, //下張計進入速度
-    // effect: 'creative', //3D輪播
+    // effect: 'creative', //輪播樣式
     cubeEffect: {
         slideShadows: false,
     },
@@ -57,7 +57,7 @@ $(document).ready(function () {
     }
     });
 
-    // jobItem：UI設計師
+    // jobItem：UI設計師 網頁設計師 前端工程師
     var jobBlockId = document.getElementById('jobBlockId');
     window.addEventListener('scroll', function() {
     var triggerPosition = window.innerHeight / 1;
@@ -66,22 +66,24 @@ $(document).ready(function () {
         jobBlockId.classList.add('animate__animated', 'animate__fadeInRight');
     }
     });
-    // jobItem：網頁設計師
+
+    // 線上及實體課的差異
     var tableId = document.getElementById('tableId');
     window.addEventListener('scroll', function() {
     var triggerPosition = window.innerHeight / 1;
     var elementPosition = tableId.getBoundingClientRect().top;
     if (elementPosition <= triggerPosition) {
-        tableId.classList.add('animate__animated', 'animate__fadeInUp');
+        tableId.classList.add('animate__animated', 'animate__fadeInLeft');
     }
     });
-    // jobItem：前端工程師
+
+    // 對我們的課程感興趣嗎？
     var interested = document.getElementById('interested');
     window.addEventListener('scroll', function() {
     var triggerPosition = window.innerHeight / 1;
     var elementPosition = interested.getBoundingClientRect().top;
     if (elementPosition <= triggerPosition) {
-        interested.classList.add('animate__animated', 'animate__fadeInUp');
+        interested.classList.add('animate__animated', 'animate__fadeInRight');
     }
     });
 

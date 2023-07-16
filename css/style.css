@@ -325,26 +325,10 @@ table {
 	box-shadow: 0 0 10px 5px #e5e5e5;
 }
 .course-item-a{
-	display: block;
 	text-decoration: none;
 	color: black;
 }
-.course-item-a a{
-	display: block;
-}
-.html-img, .rwd-img, .jquery-img{
-	width: 300px;
-	height: 170px;
-}
-.html-img{
-	background: url(/img/html.png);
-}
-.rwd-img{
-	background: url(/img/rwd.png);
-}
-.jquery-img{
-	background: url(/img/jQuery.png);
-}
+
 .course-item h2{
 	text-align: center;
 	font-size: 25px;
@@ -384,7 +368,6 @@ table {
 	text-align: center;
 	font-weight: bold;
 }
-
 .jobBox {
 	width:300px;
 	height: 300px;
@@ -405,7 +388,6 @@ table {
 .jobBox:hover > .jobBox_image {
 	width:100px; /* 展開 or 收起 */
 }
-
 .jobBox_rotate {
 	background-color:blue;
 	width:300px;
@@ -417,12 +399,6 @@ table {
 	margin-left:-10px;
 	width:105%;
 }
-/* .jobHeading,.jobOverlay {
-	position:absolute;
-	margin:15px;
-	font-size:20px;
-	text-decoration:none;
-} */
 .jobHeading{
 	position:absolute;
 	margin-top:60px;
@@ -620,6 +596,3 @@ input:focus {
 .animate__animated {
 	--animate-duration: 2s;
 }
-/* #uiDesign, #webDesign, {
-	opacity: 0;
-} */
