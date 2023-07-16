@@ -11,7 +11,10 @@ $(document).ready(function () {
     direction: 'horizontal',
     loop: true,
     speed: 2000, //下張計進入速度
-    // effect: 'cube', //3D輪播
+    // effect: 'creative', //3D輪播
+    cubeEffect: {
+        slideShadows: false,
+    },
     
     autoplay: {
         delay: 1000,
@@ -33,6 +36,7 @@ $(document).ready(function () {
     },
 
     });
+
 
     // 回頂部
     $('.wrap').on('click','.fa-angle-double-up',function (e) {
@@ -80,4 +84,5 @@ $(document).ready(function () {
         interested.classList.add('animate__animated', 'animate__fadeInUp');
     }
     });
+
 });
