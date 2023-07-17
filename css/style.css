@@ -475,7 +475,6 @@ table {
 .form{
 	background: -webkit-linear-gradient(top, #00674b, #02986e);
 	width: 1000px;
-	height: 404px;
 	margin-left: 10px;
 }
 .enter{
@@ -491,6 +490,7 @@ table {
 	background-color: white;
 	border-radius: 3px;
 	border: none;
+	resize: none;
 }
 .form h3{
 	padding-top: 38px;
@@ -500,10 +500,10 @@ table {
 	line-height: 1.5;
 	color: white;
 }
-.formRight{
+.personal{
 	margin-left: 40px;
 }
-.formRight h4{
+.personal h4{
 	margin-bottom: 5px;
 }
 .n, .p, .m{
@@ -537,6 +537,7 @@ input:focus {
 .sb:hover{
 	background: #ffffff;
 	color: #00cc98;
+	cursor: pointer;
 }
 
 /* 頁尾 */
