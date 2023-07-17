@@ -61,24 +61,19 @@ table {
 	display: flex;
 	justify-content: end;
 	background: #f6f6f6;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 .fb{
 	display: block;
 	display: flex;
 	align-items: center;
-	background: url(/img/follow/fb.png);
-	background-position: 0px 50%;
-	background-repeat: no-repeat;
-	width: 60px;
-	height: 28px;
-	font-size: 13px;
 	font-weight: bold;
-	text-indent: 20px;
+	text-indent: 5px;
 	color: #5d6998;
 	white-space: nowrap;
 	text-decoration: none;
+	margin-right: 10px;
 }
 .fb:hover{
 	color: blue;
@@ -92,23 +87,19 @@ table {
 	color: #cbcbcb;
 }
 .tw{
-	z-index: 10;
 	display: block;
 	display: flex;
 	align-items: center;
-	background: url(/img/follow/tw.png);
-	background-position: 0px 50%;
-	background-repeat: no-repeat;
-	width: 90px;
-	height: 28px;
-	font-size: 13px;
-	text-indent: 20px;
-	color: #0ea1ea;
+	text-indent: 5px;
+	color: #00aaff;
 	white-space: nowrap;
 	text-decoration: none;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 15px;
 }
 .tw:hover{
-	color: rgb(0, 204, 255);
+	color: #0084ff;
 }
 
 
@@ -123,13 +114,8 @@ table {
 	/* float: left; */
 }
 .header h1 a{
-	background-image: url(/img/logo.png);
-	width: 171px;
 	height: 37px;
 	display: block;
-	text-indent: 101%;
-	overflow: hidden;
-	white-space: nowrap;
 }
 .menu{
 	display: flex;
@@ -561,13 +547,7 @@ input:focus {
 	padding-bottom: 58px;
 }
 .footerLogo{
-	background: url(/img/footer.png);
-	width: 171px;
-	height: 36px;
 	margin-left: 20px;
-	text-indent: 101%;
-	white-space: nowrap;
-	overflow: hidden;
 }
 .footer li{
 	display: flex;
