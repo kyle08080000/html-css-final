@@ -46,14 +46,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 *,*:before,*:after{ 
 	box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	height: auto;
 }
 
 .wrap{
 	margin: 0 auto;
-	width: 1024px;
+	max-width: 1000px;
 	overflow: hidden;
 }
 
@@ -121,7 +124,6 @@ table {
 	display: flex;
 	margin-right: 10px;
 	position: relative;
-	/* overflow: hidden; */
 }
 .menu li{
 	width: 80px;
@@ -129,11 +131,12 @@ table {
 	line-height: 20px;
 	position: relative;
 	display: inline-block;
-	padding: 0 10px;
+	padding: 0 30px;
 }
 /* 問與答 箭頭 */
 .ask{
-	padding-left: 20px;
+	margin-left: 5px;
+	padding-left: 10px;
 }
 .menu a{
 	display: flex;
@@ -208,8 +211,8 @@ table {
 .fa-angle-right {
 	display: block;
 	position: absolute;
-	top: 33%;
-	right: 25%;
+	top: 35%;
+	right: 18%;
 	color: #00ab8c;
     transition: transform 0.5s;
 }
@@ -218,15 +221,62 @@ table {
 }
 
 /* 輪播圖 */
+.mobile{
+	display: none;
+}
 .swiper {
-	width: 1025px;
-	height: 560px;
-	/* margin-top: 25px; */
+	max-width: 100%;
+	max-height: 560px;
 	margin-bottom: 25px;
 }
-.swiper-slide a img{
-	height: 100% !important;
+.swiper-pagination{
+	display: none;
 }
+.swiper-wrapper{
+	max-width: 100%;
+	max-height: 100%;
+}
+.swiper-wrapper img{
+	/* height: 100%; */
+}
+.bannerh2{
+	display: block;
+	position: absolute;
+	top: 40%;
+	left: 10%;
+	font-size: 50px;
+	color: white;
+}
+.swiperOne {
+    /* height: 547px;  */
+	/* 或某個固定的高度 */
+}
+.swiper-slide > a {
+    display: block; /* 確保 a 是區塊級元素，可以設定高度 */
+    height: 547px;
+	text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/* 讓banner1滿版 */
+.swiperOne > a > img {
+	max-width: none;
+    height: 100%;
+}
+.swiperOne > .fistBanner{
+	text-indent: 0px;
+}
+.laptop{
+	background: url(../img/banner/bg_course.png);
+}
+.Code{
+	background: url(../img/banner/bg_index.png);
+}
+.questionMark{
+	background: url(../img/banner/bg_QA.png);
+}
+
+
 .swiper-button-prev,
 .swiper-button-next{
 	color: white;
@@ -245,11 +295,15 @@ table {
     display: flex;
     justify-content: space-evenly;
     position: relative;/* 效果線相對定位點 */
-    width: 300px;
+    width: 30.33333%;
 	height: 400px;
     box-shadow: 0 2px 3px 2px #f1f1f1;
     overflow: hidden;
 }
+.course-item-a{
+	width: 100%;
+}
+
 
 /* 線條效果 Top line */
 .course-item:before, .course-item:after {
@@ -314,7 +368,6 @@ table {
 	text-decoration: none;
 	color: black;
 }
-
 .course-item h2{
 	text-align: center;
 	font-size: 25px;
@@ -330,22 +383,15 @@ table {
 	font-size: 50px;
 	text-align: center;
 }
-.jobs{
-	display: flex;
-	font-size: 30px;
-	margin-top: 30px;
-	
-}
-
 .jobBlock{
 	display: flex;
 	justify-content: space-evenly;
 }
-
 .jobItem{
 	text-decoration: none;
 	color: black;
 	position: relative;
+	/* 加號 定位點 */
 }
 .jobTitle{
 	margin-top: 50px;
@@ -355,7 +401,7 @@ table {
 	font-weight: bold;
 }
 .jobBox {
-	width:300px;
+	width: 300px;
 	height: 300px;
 	background-color: #255957;
 	overflow:hidden;
@@ -371,19 +417,19 @@ table {
 	overflow:hidden;
 	transition: all 800ms cubic-bezier(0.680, -0.550, 0.265, 1.550);/* 貝茲曲線 */
 }
-.jobBox:hover > .jobBox_image {
-	width:100px; /* 展開 or 收起 */
+.jobBox_imageOpen {
+	width:100px;
+	 /* 展開 or 收起 */
 }
 .jobBox_rotate {
-	background-color:blue;
 	width:300px;
 	height:80px;
 	margin-left:20px;
 	transform:skewX(-150deg);
 }
 .jobBox_rotate img {
-	margin-left:-10px;
-	width:105%;
+	margin-left: -4px;
+	/* width:105%; */
 }
 .jobHeading{
 	position:absolute;
@@ -427,23 +473,24 @@ table {
 .fa-plus{
 	color: #fff;
 	position: absolute;
-	right: 5px;
-	bottom: 5px;
+	right: -15px;
+	bottom: -15px;
 	transition: transform 1s;
+	padding: 20px;
 }
-.jobItem:hover .fa-plus {
+.fa-plusOpen {
 	transition: transform 1s;
 	transform: rotate(-135deg);
-	
 }
 
 
 /* 線上及實體課程差異 */
 .table-title{
 	text-align: center;
-	font-size: 24px;
+	font-size: 38px;
 	padding-top: 60px;
 	padding-bottom: 28px;
+	font-weight: bold;
 }
 .compare{
 	margin-left: 80px;
@@ -474,11 +521,11 @@ table {
 /* 對我們的課程有興趣嗎？ */
 .form{
 	background: -webkit-linear-gradient(top, #00674b, #02986e);
-	width: 1000px;
-	margin-left: 10px;
+	max-width: 1000px;
 }
 .enter{
 	display: flex;
+	width: 100%;
 }
 .quiz{
 	padding-left: 20px;
@@ -540,6 +587,7 @@ input:focus {
 	cursor: pointer;
 }
 
+
 /* 頁尾 */
 .footer{
 	display: flex;
@@ -576,4 +624,292 @@ input:focus {
 }
 .animate__animated {
 	--animate-duration: 2s;
+}
+
+@media(max-width:844px){
+	.swiper {
+		max-width: 100%;
+		max-height: 420px;
+		margin-bottom: 25px;
+	}
+	.swiper-pagination{
+		display: block;
+	}
+	.swiper-button-prev, .swiper-button-next{
+		display: none;
+	}
+	.swiper-wrapper{
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.bannerh2{
+		line-height: 1.5;
+		top: 25%;
+	}
+	.swiper-slide > a{
+		max-height: 420px;
+		background-position: 50%;
+	}
+
+	.course-item-a p, .coueseP{
+		font-weight: bold;
+	}
+	.job{
+		font-size: 38px;
+		font-weight: bold;
+	}
+	.jobBlock{
+		float: left;
+		flex-wrap: wrap;
+		margin-bottom: 10%;
+	}
+	.jobItem{
+		margin: 0 5%;
+	}
+	.differences, .table-title{
+		clear: both;
+	}
+	.compare{
+		max-width: 100%;
+		margin-left: 0px;
+	}
+	.compare th,.compare td{
+		border-top: 1px solid #dcdcdc;
+		border-bottom: 1px solid #dcdcdc;
+	}
+	.form{
+		width: 100%;
+	}
+	.enter{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.quiz{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+	.personal{
+		margin-left: 0px;
+		margin-top: 3%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.personal h4{
+		margin-top: 0.5%;
+		margin-right: 1%;
+	}
+	.sb{/* 送出按鈕 */
+		margin-bottom: 3%;
+	}
+}
+
+
+
+
+
+
+
+@media(max-width:767px){
+	.swiper {
+		max-width: 100%;
+		max-height: 420px;
+		margin-bottom: 25px;
+	}
+	.swiper-pagination{
+		display: block;
+	}
+	.swiper-button-prev, .swiper-button-next{
+		display: none;
+	}
+	.swiper-wrapper{
+		/* max-width: 100%;
+		max-height: 100%; */
+	}
+	.swiper-slide > a{
+		max-width: none;
+		height: 450px; /* 高度100% */
+	}
+	.swiper-slide > a > img{
+		max-width: none;
+		height: 450px;
+		/* position: relative; */
+		
+	}
+	.bannerh2{
+		/* position: absolute; */
+		/* z-index: 3; */
+		line-height: 1.5;
+		top: 20%;
+		font-size: 40px;
+		width: 250px;
+	}
+	.laptop{
+		background: url(../img/banner/bg_course_02_moblie.png);
+	}
+	.Code{
+		background: url(../img/banner/bg_index_03_mobile.png);
+	}
+	.questionMark{
+		background: url(../img/banner/bg_QA_03.png);
+	}
+
+	.swiper-slide > a{
+		background-position: -1%;
+	}
+	
+	.couese{
+		float: left;
+		flex-wrap: wrap;
+		margin-bottom: 10%;
+	}
+	.course-item {
+		float: left;
+		width: 180px;
+		height: 280px;
+		margin-top: 2%;
+		margin-bottom: 1%;
+		box-shadow: 0 2px 2px 2px #f1f1f1;
+		/* overflow: hidden; */
+	}
+	.course-item-a > h2{
+		font-size: 16px;
+	}
+	.course-item-a p, .coueseP{
+		font-weight: normal;
+		font-size: 5px;
+		padding: 10px;
+	}
+	
+
+	.job{
+		clear: both;
+		font-size: 30px;
+		font-weight: bold;
+		margin-left: 21%;
+		margin-right: 21%;
+		line-height: 1.5;
+		
+	}
+	.jobBlock{
+		float: left;
+		flex-wrap: wrap;
+		margin-bottom: 10%;
+	}
+	.jobItem{
+		margin: 0 5%;
+	}
+	.jobTitle{
+		font-size: 25px;
+		letter-spacing: 5px;
+	}
+
+	.table-title{
+		clear: both;
+		font-size: 30px;
+	}
+	.compare{
+		max-width: 100%;
+		margin-left: 0px;
+		font-size: 20px;
+	}
+	.compare th,.compare td{
+		border-top: 1px solid #dcdcdc;
+		border-bottom: 1px solid #dcdcdc;
+		
+	}
+
+	.form{
+		width: 100%;
+	}
+	.enter{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.quiz{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+	.textarea{
+		width: 85%;
+	}
+	.personal{
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 3%;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		/* align-items: ; */
+	}
+	.n,.p,.m{
+		display: flex;
+		align-items: center;
+		width: 85%;
+	}
+	.n > input,
+	.p > input,
+	.m > input {
+		width: 100%;
+	}
+	
+	.personal h4{
+		white-space: nowrap;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.sb{/* 送出按鈕 */
+		margin-bottom: 5%;
+		margin-left: 0;
+	}
+
+		/* 頁尾 */
+	.footer{
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		/* margin-bottom: 30px; */
+		padding-bottom: 10%;
+		/* float: left;
+		flex-wrap: wrap;
+		margin-top: 5%; */
+	}
+	.footerLogo{
+		/* margin-left: 10%; */
+		margin-top: 5%;
+		margin-bottom: 0;
+	}
+	.footerLogo > img{
+		width: 200px;
+	}
+	.footer ul{
+		margin-left: 10%;
+	}
+	.footer li{
+		display: flex;
+		justify-content: center;
+		font-size: 20px;
+		margin-right: 0px;
+		margin-bottom: 5%;
+	}
+
+	/* 回頂部 */
+	.fa-angle-double-up{
+		color: #00ab8c;
+		font-size: 60px;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+	}
 }

@@ -1,9 +1,15 @@
 $(document).ready(function () {
-    
+    // 下拉選單
     $('.wrap').on('click','.menu > li > .ask',function (e) {
         e.preventDefault();
         $('.down-menu').toggleClass('open');
         $('.fa-angle-right').toggleClass('fa-angle-right-t');
+    });
+    // jobBlock jobBox_imageOpen
+    $('.wrap').on('click','.fa-plus',function (e) {
+        e.preventDefault();
+        $(this).toggleClass('fa-plusOpen');
+        $(this).parent().find('.jobBox').find('.jobBox_image').toggleClass('jobBox_imageOpen');
     });
 
     const swiper = new Swiper('.swiper', {

@@ -12,6 +12,9 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="FB上的網址" />
 <meta property="og:image" content="FB的圖片" />
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
 <title>HTML、CSS 最終作業</title>
 <link rel="icon" href="./img/HSicon.png" />
 <link rel="stylesheet" href="css/all.min.css">
@@ -44,15 +47,18 @@
             </h1>
             <ul class="menu">
                 <li>
-                    <a href="＃">首頁</a>
+                    <a href="#">首頁</a>
                 </li>
                 <li>
-                    <a href="＃">關於六角</a>
+                    <a href="#">關於六角</a>
+                </li>
+                <li>
+                    <a href="#">聯絡我們</a>
                 </li>
                 <!-- 箭頭icon -->
                 <div class="fas fa-angle-right"></div>
                 <li>
-                    <a href="＃" class="ask">問與答</a>
+                    <a href="#" class="ask">問與答</a>
                 </li>
             </ul>
         </div>
@@ -70,29 +76,24 @@
             <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/banner/banner.png" alt="六角學院">六角學院
+                    <div class="swiper-slide swiperOne">
+                        <a class="fistBanner" href="#">
+                            <h2 class="bannerh2">六角學院<br>讓你奠定良好的前端基礎</h2>
+                            <img src="img/banner/banner_bg.png" alt="六角學院">
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/banner/bg_course.png" alt="筆電">
-                        </a>
+                        <a class="laptop" href="#">筆電</a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/banner/bg_index.png" alt="Code">
-                        </a>
+                        <a class="Code" href="#">Code</a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/banner/bg_QA.png" alt="question mark">
-                        </a>
+                        <a class="questionMark" href="#">question mark</a>
                     </div>
                 </div>
                 <!-- If we need pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
+                <div class="swiper-pagination"></div>
             
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
@@ -153,7 +154,7 @@
             <!-- UI設計師 網頁設計師 前端工程師 區塊 -->
             <div class="jobBlock" id="jobBlockId">
                 <!-- UI設計師 -->
-                <a class="jobItem" id="uiDesign" href="#">
+                <div class="jobItem" id="uiDesign">
                     <h3 class="jobTitle">UI 設計師</h3>
                     <div class="fas fa-plus"></div>
                     <div class="jobBox">
@@ -172,9 +173,9 @@
                         </div>
                         </div>
                     </div>
-                </a>
+                </div>
                 <!-- 網頁設計師 -->
-                <a class="jobItem" id="webDesign" href="#">
+                <div class="jobItem" id="webDesign">
                     <h3 class="jobTitle">網頁設計師</h3>
                     <div class="fas fa-plus"></div>
                     <div class="jobBox">
@@ -189,9 +190,9 @@
                         </div>
                         </div>
                     </div>
-                </a>
+                </div>
                 <!-- 前端工程師 -->
-                <a class="jobItem" id="frontEndEngineer" href="#">
+                <div class="jobItem" id="frontEndEngineer">
                     <h3 class="jobTitle">前端工程師</h3>
                     <div class="fas fa-plus"></div>
                     <div class="jobBox">
@@ -207,7 +208,7 @@
                         </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
 
             <!-- 線上及實體課的差異 -->
