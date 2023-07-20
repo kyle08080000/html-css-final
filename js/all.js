@@ -1,10 +1,18 @@
 $(document).ready(function () {
     // 下拉選單
-    $('.wrap').on('click','.menu > li > .ask',function (e) {
+    $('.wrap').on('click','.menu > .ask',function (e) {
         e.preventDefault();
-        $('.down-menu').toggleClass('open');
+        $('.ask-menu').toggleClass('open');
         $('.fa-angle-right').toggleClass('fa-angle-right-t');
     });
+    $('.wrap').on('click','.burgermenu',function (e) {
+        e.preventDefault();
+        $('.menu').toggleClass('burgerOpen');
+        $('.bars').toggleClass('fa-bars');
+        $('.bars').toggleClass('fa-xmark')
+    });
+
+
     // jobBlock jobBox_imageOpen
     $('.wrap').on('click','.fa-plus',function (e) {
         e.preventDefault();

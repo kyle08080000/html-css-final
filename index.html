@@ -26,52 +26,62 @@
 </head>
 <body>
     <div class="wrap">
-        <!-- fb tw 粉絲團-->
-        <ul class="follow">
-            <li>
-                <a class="fb fab fa-facebook-square" href="#">粉絲團</a>
-            </li>
-            <li>
-                <span>|</span>
-            </li>
-            <li>
-                <a class="tw fab fa-twitter-square" href="#">追隨我們</a>
-            </li>
-        </ul>
         <!-- header -->
         <div class="header">
-            <h1>
-                <a href="#">
-                    <img src="img/logo.png" alt="六角學院logo">
-                </a>
-            </h1>
-            <ul class="menu">
+            <!-- fb tw 粉絲團-->
+            <ul class="follow">
                 <li>
-                    <a href="#">首頁</a>
+                    <a class="fb fab fa-facebook-square" href="#">粉絲團</a>
                 </li>
                 <li>
-                    <a href="#">關於六角</a>
+                    <span>|</span>
                 </li>
                 <li>
-                    <a href="#">聯絡我們</a>
-                </li>
-                <!-- 箭頭icon -->
-                <div class="fas fa-angle-right"></div>
-                <li>
-                    <a href="#" class="ask">問與答</a>
+                    <a class="tw fab fa-twitter-square" href="#">追隨我們</a>
                 </li>
             </ul>
+            <div class="container">
+                <h1>
+                    <a href="#">六角學院</a>
+                </h1>
+                <ul class="menu">
+                    <li>
+                        <a href="#" class="home">首頁</a>
+                    </li>
+                    <li>
+                        <a href="#">關於六角</a>
+                    </li>
+                    <li>
+                        <a href="#">聯絡我們</a>
+                    </li>
+                    <!-- 箭頭icon -->
+                    <li class="ask">
+                        <div class="fas fa-angle-right"></div>
+                        <a href="#">問與答</a>
+                        <!-- 下拉選單 -->
+                        <ul class="ask-menu">
+                            <li>
+                                <a href="#">常見問答</a>
+                            </li>
+                            <li>
+                                <a href="#">六角學員作品牆</a>
+                            </li>
+                            <li>
+                                <a href="#">如何成為前端工程師</a>
+                            </li>
+                        </ul> 
+                    </li>
+                </ul>
+                <div class="burgermenu">
+                    <div class="bars fa-solid fa-bars"></div>
+                </div>
+            </div>
         </div>
+        
+
         <!-- 輪播圖 & 下拉選單 區塊 -->
         <div class="swip">
-            <!-- 下拉選單 -->
-            <div class="down-menu">
-                <ul>
-                    <li><a href="">常見問答</a></li>
-                    <li><a href="">六角學員作品牆</a></li>
-                    <li><a href="">如何成為前端工程師</a></li>
-                </ul>            
-            </div>
+            
             <!-- 輪播圖 -->
             <div class="swiper">
                 <!-- Additional required wrapper -->
@@ -140,7 +150,7 @@
                             <img src="img/course/jQuery.png" alt="jQuery實戰教學">
                         </a>
                         <h2>jQuery 實戰教學</h2>
-                        <ul class="coueseP">本課程有以下特色
+                        <ul class="coueseP jQueryP">本課程有以下特色
                             <li>．暸解變數的使用方法</li>
                             <li>．學習並操作DOM</li>
                             <li>．學習基本數學運算方法</li>
@@ -212,12 +222,12 @@
             </div>
 
             <!-- 線上及實體課的差異 -->
+            <h3 class="table-title">線上及實體課的差異</h3>
             <div id="tableId" class="differences">
-                <h3 class="table-title">線上及實體課的差異</h3>
                 <table class="compare">
                     <tr>
                         <th>項目</th>
-                        <th>Hex School 線上課程</th>
+                        <th>Hex School</th>
                         <th>一般線上課程</th>
                         <th>實體課程</th>
                     </tr>
