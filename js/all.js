@@ -18,6 +18,7 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).toggleClass('fa-plusOpen');
         $(this).parent().find('.jobBox').find('.jobBox_image').toggleClass('jobBox_imageOpen');
+        $(this).parent().find('.jobBox').find('.jobOverlay').toggleClass('show');
     });
 
     const swiper = new Swiper('.swiper', {
